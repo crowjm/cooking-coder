@@ -11,7 +11,7 @@ header {
 	text-align: center;
 }
 
-header > h1 {
+header h1 {
 	font-family: Raleway, Helvetica, sans-serif;
 	font-weight: 800;
 	font-size: 3em;
@@ -27,14 +27,14 @@ nav {
 	font-weight: 400;
 }
 
-nav > ul {
+nav ul {
 	list-style: none;
 	text-align: center;
 	padding: 0;
 	margin-top: 0;
 }
 
-nav > ul > li {
+nav ul li {
 	display: inline-block;
 	margin-right: 1em;
 	padding-top: 0.75em;
@@ -56,13 +56,13 @@ nav > ul > li:last-child {
 	font-family: Raleway, Helvetica, sans-serif;
 }
 
-.post > h2 {
+.post h2 {
 	font-weight: 600;
 	text-transform: uppercase;
 	font-size: 1.5em;
 }
 
-.post > p {
+.post p {
 	font-weight: 400;
 	line-height: 1.4;
 	font-size: 1em;
@@ -83,4 +83,37 @@ footer {
 	padding-bottom: 0.5em;
 	text-align: center;
 	font-family: Raleway, Helvetica, sans-serif;
+}
+
+
+/***CSS for medium sized devices, ≥768px***/
+@media (min-width: 768px) {
+	
+	.post {
+		max-width: 600px;
+	}
+}
+
+
+/*** CSS for large size devices, ≥992px***/
+@media (min-width: 992px) {
+
+	.post-container {
+		margin: 0 auto;
+		max-width: 1000px;
+	}
+
+	.post {
+		display: inline-block;
+		box-sizing: border-box;
+		max-width: 300px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.post:nth-of-type(3n+2) {
+		margin-right: 30px;
+		margin-left: 30px;
+	}
+
 }
