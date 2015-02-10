@@ -1,0 +1,64 @@
+/***CSS for medium sized devices, ≥768px***/
+@media (min-width: 768px) {
+	
+	.post, .page-post, {
+		max-width: 600px;
+	}
+
+	.about {
+		max-width: 600px;
+		margin: 0 auto;
+		.main-about {
+			display: inline-block;
+			max-width: 375px;
+			margin-right: 25px;
+		}
+		.about-image {
+			display: inline-block;
+			max-width: 200px;
+		}
+	}
+
+}
+
+
+/*** CSS for large size devices, ≥992px***/
+@media (min-width: 992px) {
+
+	.post-container {
+		margin: 0 auto;
+		max-width: 1000px;
+	}
+
+	.post {
+		display: inline-block;
+		box-sizing: border-box;
+		max-width: 300px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.post:nth-of-type(3n+2) {
+		margin-right: 30px;
+		margin-left: 30px;
+	}
+
+	.page-post, {
+		max-width: 800px;
+	}
+
+	.about {
+		max-width: 800px;
+		margin: 0 auto;
+		.main-about {
+			display: inline-block;
+			max-width: 575px;
+			margin-right: 25px;
+		}
+		.about-image {
+			display: inline-block;
+			max-width: 200px;
+		}
+	}
+
+}

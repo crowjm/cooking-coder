@@ -1,0 +1,94 @@
+$font-fam: Raleway, Helvetica, sans-serif;
+
+@mixin font($font-fam, $font-weight, $font-size) {
+	font-family: $font-fam;
+	font-weight: $font-weight;
+	font-size: $font-size;
+}
+
+@mixin color($color, $bg-color) {
+	color: $color;
+	background-color: $bg-color;
+}
+
+
+/***header***/
+
+header {
+	text-align: center;
+	@include color ($header-color, $header-bg);
+	h1 {
+		@include font($font-fam, 800, 3em);
+	}
+}
+
+
+/***nav***/
+
+nav {
+	@include font($font-fam, 300, 1em);
+	@include color($nav-color, $nav-bg);
+	ul {
+		list-style: none;
+		text-align: center;
+	}
+	a:hover {
+		color: $hover-color;
+	}
+	a {
+		color: $nav-color;
+	}
+}
+
+
+/***post***/
+
+.post, .page-post {
+	font-family: $font-fam;
+	color: $post-color;
+	h2 {
+		@include font($font-fam, 600, 1.5em);
+		text-transform: uppercase;
+	}
+	p {
+		@include font($font-fam, 400, 1em);
+		line-height: 1.4;
+	}
+}
+
+
+/***about***/
+
+.main-about {
+	color: $post-color;
+	a:hover {
+		color: $hover-color;
+	}
+	a {
+		color: $post-color;
+	}
+}
+
+
+/***contact***/
+
+.main-contact {
+	color: $post-color;
+	a:hover {
+		color: $post-color;
+	}
+	a {
+		color: $hover-color;
+		text-decoration: none;
+	}
+}
+
+
+
+/***footer***/
+
+footer {
+	text-align: center;
+	font-family: $font-fam;
+	@include color($footer-color, $footer-bg);
+}
